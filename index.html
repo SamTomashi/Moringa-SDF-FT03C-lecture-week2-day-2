@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <form class="d-flex flex-row" onSubmit="save(event)">
+            <div class="m-3">
+                <input class="form-control form-control-sm" type="text" name="itemName" placeholder="Milk"/>
+            </div>
+            <div class="m-3">
+                <input class="form-control form-control-sm" type="number" name="qty" placeholder="1" min="1"/>
+            </div>
+            <div class="m-3">
+                <input class="form-control form-control-sm"  type="text" name="price" placeholder="45.6"/>
+            </div>
+            <div class="m-3">
+                <button  class="btn btn-sm btn-dark" type="submit">Save</button>
+            </div>
+        </form>
+       <table class="table table-hover table-dark  table-bordered">
+        <tr>
+            <th>Items</th>
+            <th>QTY</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>3</td>
+            <td>1800</td>
+            <td>
+                <button class="btn btn-sm text-light">X</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Sugar</td>
+            <td>2</td>
+            <td>500</td>
+            <td>
+                <button class="btn btn-sm text-light">X</button>
+            </td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td class="text-end" colspan="2">Total</td>
+                <td id="total" class="text-start"colspan="2">KSH2300</td>
+            </tr>
+        </tfoot>
+       </table>
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
